@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Schema;
             $table->string('link');
             $table->string('currency');
             $table->string('logo');
+            $table->timestamps();
         });
     }
 

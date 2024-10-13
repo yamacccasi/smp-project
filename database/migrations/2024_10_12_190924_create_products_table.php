@@ -14,6 +14,7 @@ class CreateProductsTable extends Migration
             $table->string('manufacturer_part_number')->unique();
             $table->string('pack_size');
             $table->string('image');
+            $table->timestamps();
 
         });
     }
