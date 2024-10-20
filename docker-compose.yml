@@ -17,8 +17,8 @@ services:
         container_name: mysql
         restart: always
         environment:
-            MYSQL_DATABASE: smp_2
-            MYSQL_ROOT_PASSWORD: yamacasi24
+            MYSQL_DATABASE: $DB
+            MYSQL_ROOT_PASSWORD: $PASS
         volumes:
             - db_data:/var/lib/mysql
 
