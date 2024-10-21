@@ -32,4 +32,18 @@ class Product extends Model
             ->withPivot('retailer_url')
             ->withTimestamps();
     }
+
+    // API
+    public static function createProduct(array $data)
+    {
+        return self::create($data);
+    }
+    public static function findByMPN($mpn)
+    {
+        return self::where('manufacturer_part_number', $mpn)->first();
+    }
+    public static function findById($id)
+    {
+        return self::findOrFail($id);
+    }
 }
